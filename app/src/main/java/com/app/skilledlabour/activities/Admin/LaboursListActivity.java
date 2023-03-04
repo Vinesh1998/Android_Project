@@ -18,6 +18,8 @@ public class LaboursListActivity extends AppCompatActivity {
     LaboursAdminAdapter adapter;
     RecyclerView recyclerView;
 
+    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
