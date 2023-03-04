@@ -26,6 +26,8 @@ public class LaboursAdminAdapter extends RecyclerView.Adapter<LaboursAdminAdapte
         this.mContext = context;
     }
 
+    
+
     @NonNull
     @Override
     public MyAuthor onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
