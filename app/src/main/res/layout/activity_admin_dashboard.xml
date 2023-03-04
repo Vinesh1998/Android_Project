@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.Admin.DashboardAdminActivity">
+
+    <Button
+        android:id="@+id/signOutBtn"
+        android:layout_width="211dp"
+        android:layout_height="45dp"
+        android:background="@drawable/rounded_edittext_2"
+        android:text="SignOut"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.916" />
+
+    <LinearLayout
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="215dp"
+        android:background="@drawable/rectangle_round"
+        android:elevation="6dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome Admin"
+            android:textColor="#ffffff"
+            android:textSize="26sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose an option"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+    </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toBottomOf="@+id/view"
+    android:orientation="vertical">
+    <Button
+        android:id="@+id/btnSkills"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/rounded_edittext"
+        android:text="Skills"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        />
+    <Button
+        android:id="@+id/btnLabours"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/rounded_edittext"
+        android:text="Labours"
+        android:layout_margin="10dp"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        />
+    <Button
+        android:id="@+id/btnCustomers"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/rounded_edittext"
+        android:text="Customers"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        />
+    <Button
+        android:id="@+id/btnBookings"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/rounded_edittext"
+        android:text="Bookings"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        />
+    <Button
+        android:id="@+id/btnQueries"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/rounded_edittext"
+        android:text="Queries"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        />
+
+</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
