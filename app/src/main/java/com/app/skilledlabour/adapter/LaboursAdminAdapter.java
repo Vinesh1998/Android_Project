@@ -27,6 +27,7 @@ public class LaboursAdminAdapter extends RecyclerView.Adapter<LaboursAdminAdapte
     }
 
     
+    
 
     @NonNull
     @Override
