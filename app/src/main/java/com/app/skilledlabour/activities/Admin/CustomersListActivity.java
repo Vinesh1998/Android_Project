@@ -1,7 +1,6 @@
 package com.app.skilledlabour.activities.Admin;
 
 import static com.app.skilledlabour.helpers.common_helper.getCustomersList;
-import static com.app.skilledlabour.helpers.common_helper.getLaboursList;
 
 import android.os.Bundle;
 
@@ -11,16 +10,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.app.skilledlabour.R;
 import com.app.skilledlabour.adapter.CustomersListAdminAdapter;
-import com.app.skilledlabour.adapter.LaboursAdminAdapter;
 import com.app.skilledlabour.models.Customer;
-import com.app.skilledlabour.models.Labour;
 
 import java.util.List;
 
 public class CustomersListActivity extends AppCompatActivity {
     CustomersListAdminAdapter adapter;
     RecyclerView recyclerView;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

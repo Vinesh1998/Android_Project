@@ -29,12 +29,12 @@ public class DashboardAdminActivity extends AppCompatActivity {
         btnCustomers.setOnClickListener(view -> {
              startActivity(new Intent(this, CustomersListActivity.class));
         });
-//        btnRequests.setOnClickListener(v -> {
-//             startActivity( new Intent(this, RequestedBooksActivity.class));
-//        });
-//        btnDues.setOnClickListener(v -> {
-//              startActivity( new Intent(this, OverDueBooksActivity.class));
-//        });
+        btnBookings.setOnClickListener(v -> {
+             startActivity( new Intent(this, AllBookingsActivity.class));
+        });
+        btnQueries.setOnClickListener(v -> {
+              startActivity( new Intent(this, QueriesActivity.class));
+        });
         SignOutBtn=findViewById(R.id.signOutBtn);
         SignOutBtn.setOnClickListener(v -> {
             Intent intent = new Intent(getApplicationContext(), LoginActivity.class);

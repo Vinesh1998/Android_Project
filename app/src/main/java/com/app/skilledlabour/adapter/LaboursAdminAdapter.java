@@ -1,6 +1,8 @@
 package com.app.skilledlabour.adapter;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +15,7 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.app.skilledlabour.R;
+import com.app.skilledlabour.activities.Admin.LabourDetails;
 import com.app.skilledlabour.models.Labour;
 
 import java.util.Collections;
@@ -26,9 +29,6 @@ public class LaboursAdminAdapter extends RecyclerView.Adapter<LaboursAdminAdapte
         this.mContext = context;
     }
 
-    
-    
-
     @NonNull
     @Override
     public MyAuthor onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -38,12 +38,15 @@ public class LaboursAdminAdapter extends RecyclerView.Adapter<LaboursAdminAdapte
 
     @Override
     public void onBindViewHolder(@NonNull MyAuthor holder, int position) {
-        Labour author = list.get(position);
-        holder.view_labour_name.setText(author.getName());
-        holder.item_labour_age.setText("Years : " + author.getAge() + " old");
-        //   holder.tvRating.setRating(Float.parseFloat(author.getRating()));
+        Labour labour = list.get(position);
+        holder.view_labour_name.setText(labour.getName());
+        holder.item_labour_age.setText("Years : " + labour.getAge() + " old");
         holder.labourItemCard.setOnClickListener(view->{
-        //   view.getContext().startActivity(new Intent(view.getContext(), AuthorDetailsActivity.class));
+            Intent intent = new Intent(view.getContext(), LabourDetails.class);
+            Bundle extras = new Bundle();
+            extras.putString("labour_id",labour.getId());
+            intent.putExtras(extras);
+            view.getContext().startActivity(intent);
         });
     }
 

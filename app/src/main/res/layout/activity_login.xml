@@ -66,10 +66,49 @@
         android:inputType="textPassword"
         android:paddingLeft="20dp"
         android:textColor="#000000"
-        app:layout_constraintBottom_toTopOf="@+id/LoginBtn"
+        app:layout_constraintBottom_toTopOf="@+id/layoutType"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <LinearLayout
+        android:layout_width="299dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/LoginBtn"
+        android:id="@+id/layoutType"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="vertical"
+        android:layout_margin="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Login by:"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/rgRole">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rbMale"
+                android:checked="true"
+                android:buttonTint="@color/primary_dark"
+                android:text="Admin"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rbFemale"
+                android:buttonTint="@color/primary_dark"
+                android:text="Labour/User"/>
+        </RadioGroup>
+    </LinearLayout>
     <Button
         android:id="@+id/LoginBtn"
         android:layout_width="260dp"

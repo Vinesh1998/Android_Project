@@ -3,21 +3,22 @@ package com.app.skilledlabour.models;
 import androidx.annotation.NonNull;
 
 public class Skill {
-    private int id;
+    private String id;
     private String name;
     private String img;
 
-    public Skill(int id, String name, String img) {
+    public Skill(String id, String name, String img) {
         this.id = id;
         this.name = name;
         this.img = img;
     }
+    public  Skill(){}
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 

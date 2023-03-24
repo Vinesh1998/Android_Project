@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.app.skilledlabour">
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -22,10 +23,26 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+<!--        admin activities-->
         <activity android:name=".activities.CreateAccountActivity"/>
         <activity android:name=".activities.Admin.DashboardAdminActivity"/>
+        <activity android:name=".activities.Admin.LabourDetails"/>
         <activity android:name=".activities.Admin.SkillsActivity"/>
         <activity android:name=".activities.Admin.LaboursListActivity"/>
+        <activity android:name=".activities.Admin.AllBookingsActivity"/>
         <activity android:name=".activities.Admin.CustomersListActivity"/>
+        <activity android:name=".activities.Admin.QueriesActivity"/>
+
+        <!--        user activities-->
+        <activity android:name=".activities.Customer.DashboardUserActivity"/>
+        <activity android:name=".activities.Customer.MybookingsActivity"/>
+        <activity android:name=".activities.Customer.FindSpecialistActivity"/>
+        <activity android:name=".activities.Customer.LabourDetails"/>
+        <activity android:name=".activities.Customer.ALlLaboursActivity"/>
+
+        <!--        Labour Activities-->
+        <activity android:name=".activities.Labour.DashboardLabourActivity"/>
+        <activity android:name=".activities.Labour.MyAvailability"/>
+        <activity android:name=".activities.Labour.MyJobsActivity"/>
     </application>
 </manifest>

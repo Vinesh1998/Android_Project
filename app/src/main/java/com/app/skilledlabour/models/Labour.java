@@ -3,18 +3,23 @@ package com.app.skilledlabour.models;
 import androidx.annotation.NonNull;
 
 public class Labour {
-    private int id;
+    private String id;
     private String name;
+    private String mobile;
+    private String email;
     private int age;
     private String skill_set;
     private String availability;
-    private double rating;
+    private String rating;
     private boolean status;
 
-    public Labour(int id, String name, int age, String skill_set, String availability,
-                  double rating, boolean status) {
+    public Labour() {}
+    public Labour(String id, String name, String email, String mobile, int age, String skill_set, String availability,
+                  String rating, boolean status) {
         this.id = id;
         this.name = name;
+        this.email = email;
+        this.mobile = mobile;
         this.age = age;
         this.skill_set = skill_set;
         this.availability = availability;
@@ -22,11 +27,27 @@ public class Labour {
         this.status = status;
     }
 
-    public int getId() {
+    public String getMobile() {
+        return mobile;
+    }
+
+    public void setMobile(String mobile) {
+        this.mobile = mobile;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -70,11 +91,11 @@ public class Labour {
         this.status = status;
     }
 
-    public double getRating() {
+    public String getRating() {
         return rating;
     }
 
-    public void setRating(int rating) {
+    public void setRating(String rating) {
         this.rating = rating;
     }
 

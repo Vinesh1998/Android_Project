@@ -38,7 +38,6 @@ public class CustomersListAdminAdapter extends RecyclerView.Adapter<CustomersLis
     public void onBindViewHolder(@NonNull MyCust holder, int position) {
         Customer author = list.get(position);
         holder.view_labour_name.setText(author.getName());
-        holder.item_labour_age.setText("Years : " + author.getAge() + " old");
         //   holder.tvRating.setRating(Float.parseFloat(author.getRating()));
         holder.labourItemCard.setOnClickListener(view->{
         //   view.getContext().startActivity(new Intent(view.getContext(), AuthorDetailsActivity.class));

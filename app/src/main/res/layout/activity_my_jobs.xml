@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E5E5E5"
+    tools:context=".activities.Customer.DashboardUserActivity">
+
+    <LinearLayout
+        android:id="@+id/activity_mentor_chat_recycler_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/primary">
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:tint="@color/white"
+                android:padding="7dp"
+                android:clickable="true"
+                android:src="@drawable/ic_baseline_keyboard_arrow_left_24"
+                tools:ignore="UseAppTint"
+                android:focusable="true" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="50dp"
+                android:padding="10dp"
+                android:layout_marginTop="8dp"
+                android:gravity="start"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:text="My Jobs"
+                android:textColor="#FFFFFF"
+                />
+        </RelativeLayout>
+        <!-- RECYCLER VIEW -->
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:layout_margin="10dp"
+           >
+           <androidx.cardview.widget.CardView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:padding="10dp"
+               android:layout_margin="5dp"
+               >
+               <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="120dp"
+                   >
+                   <ImageView
+                       android:layout_width="100dp"
+                       android:layout_height="100dp"
+                       android:layout_alignParentStart="true"
+                       android:layout_alignParentLeft="true"
+                       android:layout_alignParentTop="true"
+                       android:layout_marginStart="9dp"
+                       android:layout_marginLeft="9dp"
+                       android:layout_marginTop="7dp"
+                       app:srcCompat="@drawable/ic_baseline_person_24"
+                       tools:ignore="VectorDrawableCompat" />
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_alignParentStart="true"
+                       android:layout_alignParentTop="true"
+                       android:layout_marginStart="135dp"
+                       android:layout_marginTop="5dp"
+                       android:maxLines="1"
+                       android:text="Booking at: 01-02-2023 10:00"
+                       android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                       android:textColor="@color/gray" />
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_alignParentStart="true"
+                       android:layout_alignParentTop="true"
+                       android:layout_marginStart="135dp"
+                       android:layout_marginTop="20dp"
+                       android:maxLines="1"
+                       android:text="Customer Name"
+                       android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                       android:textColor="@color/primary" />
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_alignParentStart="true"
+                       android:layout_alignParentTop="true"
+                       android:layout_marginStart="135dp"
+                       android:layout_marginTop="50dp"
+                       android:maxLines="1"
+                       android:text="general service"
+                       android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                       android:textColor="@color/cardview_dark_background" />
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_alignParentStart="true"
+                       android:layout_alignParentTop="true"
+                       android:layout_marginStart="135dp"
+                       android:layout_marginTop="90dp"
+                       android:maxLines="1"
+                       android:text="address: 202/1-P, Mt Street, Maryvalley, US"
+                       android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                       android:textColor="@color/cardview_dark_background" />
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_alignParentTop="true"
+                       android:layout_marginTop="70dp"
+                       android:maxLines="1"
+                       android:padding="7dp"
+                       android:background="@color/red"
+                       android:layout_alignParentRight="true"
+                       android:text="pending"
+                       android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                       android:textColor="@color/white" />
+               </RelativeLayout>
+           </androidx.cardview.widget.CardView>
+           <androidx.cardview.widget.CardView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:padding="10dp"
+               android:layout_margin="5dp"
+               >
+               <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="120dp"
+                   >
+                   <ImageView
+                       android:layout_width="100dp"
+                       android:layout_height="100dp"
+                       android:layout_alignParentStart="true"
+                       android:layout_alignParentLeft="true"
+                       android:layout_alignParentTop="true"
+                       android:layout_marginStart="9dp"
+                       android:layout_marginLeft="9dp"
+                       android:layout_marginTop="7dp"
+                       app:srcCompat="@drawable/ic_baseline_person_24"
+                       tools:ignore="VectorDrawableCompat" />
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_alignParentStart="true"
+                       android:layout_alignParentTop="true"
+                       android:layout_marginStart="135dp"
+                       android:layout_marginTop="5dp"
+                       android:maxLines="1"
+                       android:text="Booking at: 01-02-2023 10:00"
+                       android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                       android:textColor="@color/gray" />
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_alignParentStart="true"
+                       android:layout_alignParentTop="true"
+                       android:layout_marginStart="135dp"
+                       android:layout_marginTop="20dp"
+                       android:maxLines="1"
+                       android:text="Customer Name"
+                       android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                       android:textColor="@color/primary" />
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_alignParentStart="true"
+                       android:layout_alignParentTop="true"
+                       android:layout_marginStart="135dp"
+                       android:layout_marginTop="50dp"
+                       android:maxLines="1"
+                       android:text="general service"
+                       android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                       android:textColor="@color/cardview_dark_background" />
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_alignParentStart="true"
+                       android:layout_alignParentTop="true"
+                       android:layout_marginStart="135dp"
+                       android:layout_marginTop="70dp"
+                       android:maxLines="1"
+                       android:text="address: 202/1-P, Mt Street, Maryvalley, US"
+                       android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                       android:textColor="@color/cardview_dark_background" />
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_alignParentTop="true"
+                       android:layout_marginTop="90dp"
+                       android:maxLines="1"
+                       android:padding="7dp"
+                       android:background="@color/green"
+                       android:layout_alignParentRight="true"
+                       android:text="completed"
+                       android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                       android:textColor="@color/white" />
+               </RelativeLayout>
+           </androidx.cardview.widget.CardView>
+       </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
