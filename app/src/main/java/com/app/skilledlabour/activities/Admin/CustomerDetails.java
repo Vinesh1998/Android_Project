@@ -33,6 +33,8 @@ public class CustomerDetails extends BaseActivity {
     Button btnEdit;
     EditText custName, etEmail, etMobile, etAddress;
     Button btnUpdateCust;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -93,6 +95,8 @@ public class CustomerDetails extends BaseActivity {
             });
         });
     }
+
+    
 
     private void showDetails(Customer customer){
         parent_layout.setVisibility(View.VISIBLE);
