@@ -15,7 +15,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -70,8 +69,10 @@ public class LoginActivity extends BaseActivity  {
             if (!validateForm()) {
                 return;
             }
-            if (role.equals("Admin") && getAdminLogin(etEmail.getText().toString().trim(),etPassword.getText().toString().trim())) {
-                startActivity(new Intent(getApplicationContext(), DashboardAdminActivity.class));
+            if (role.equals("Admin") ){
+                if(getAdminLogin(etEmail.getText().toString().trim(),etPassword.getText().toString().trim()))
+                    startActivity(new Intent(getApplicationContext(), DashboardAdminActivity.class));
+                else Toast.makeText(this, "Invalid admin credentials!", Toast.LENGTH_SHORT).show();
             }else{
                 signIn(etEmail.getText().toString().trim(), etPassword.getText().toString().trim(), view);
             }

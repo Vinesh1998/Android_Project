@@ -26,8 +26,11 @@ public class AllBookingsActivity extends AppCompatActivity {
             this.finish();
         });
     }
+<<<<<<< HEAD
 
     
+=======
+>>>>>>> d590442924372d13c77e1afcd6dea42d986a6089
     public void setUpRecyclerView(){
         List<Booking> list = getAllBookingsData();
         recyclerView = findViewById(R.id.ListBookings);

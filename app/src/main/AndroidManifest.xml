@@ -32,6 +32,7 @@
         <activity android:name=".activities.Admin.AllBookingsActivity"/>
         <activity android:name=".activities.Admin.CustomersListActivity"/>
         <activity android:name=".activities.Admin.QueriesActivity"/>
+        <activity android:name=".activities.Admin.CustomerDetails"/>
 
         <!--        user activities-->
         <activity android:name=".activities.Customer.DashboardUserActivity"/>

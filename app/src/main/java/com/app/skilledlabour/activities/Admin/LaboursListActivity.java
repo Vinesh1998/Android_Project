@@ -40,6 +40,7 @@ public class LaboursListActivity extends BaseActivity {
         setUpRecyclerView();
     }
 
+
     public void setUpRecyclerView(){
         recyclerView = findViewById(R.id.ListLabour);
         adapter = new LaboursAdminAdapter(list, getApplicationContext());
@@ -47,6 +48,7 @@ public class LaboursListActivity extends BaseActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         getLaboursList();
     }
+    
 
     private List<Labour> getLaboursList(){
         if(list.size() != 0) list.clear();

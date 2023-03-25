@@ -46,9 +46,34 @@ public class common_helper {
                 "1, fblock Merine",
                 true
                 ));
+        list.add(new Customer("2",
+                "cust2@gmail.com",
+                "Customer 2",
+                "+10924655545",
+                "1, fblock Merine",
+                true
+        ));
+        list.add(new Customer("3",
+                "cust3@gmail.com",
+                "Customer 3",
+                "+1075475623126",
+                "1, fblock Merine",
+                true
+        ));
         return list;
     }
 
+    public static Customer getCustomer(String id) {
+        Customer customer = new Customer(
+                "1",
+                "cust1@gmail.com",
+                "Customer 1",
+                "+1091234567890",
+                "1, fblock Merine",
+                true
+        );
+        return customer;
+    }
     public static List<Booking> getAllBookingsData(){
         List<Booking> list = new ArrayList<>();
         list.add(new Booking(1,
@@ -69,6 +94,24 @@ public class common_helper {
                 "02-03-2023 12:30",
                 "Canceled"
                 ));
+        list.add(new Booking(3,
+                3,
+                "Customer3",
+                2,
+                "employee 3",
+                36,
+                "03-03-2023 12:30",
+                "Booked"
+        ));
+        list.add(new Booking(4,
+                4,
+                "Customer4",
+                4,
+                "employee 4",
+                45,
+                "05-03-2023 12:30",
+                "Booked"
+        ));
         return list;
     }
 
