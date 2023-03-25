@@ -115,7 +115,7 @@ public class LabourDetails extends BaseActivity {
         });
     }
 
-    
+
     private boolean validateForm(String email, String mobile, String name, String skills){
         boolean result = true;
         showProgressDialog();
