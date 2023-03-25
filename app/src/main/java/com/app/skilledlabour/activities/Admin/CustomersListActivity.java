@@ -24,6 +24,8 @@ public class CustomersListActivity extends AppCompatActivity {
         setUpRecyclerView();
         findViewById(R.id.btnBack).setOnClickListener(view->{
             this.finish();
+
+            
         });
     }
     public void setUpRecyclerView(){
