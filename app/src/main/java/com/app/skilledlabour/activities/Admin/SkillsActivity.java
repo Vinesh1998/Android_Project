@@ -25,6 +25,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+
+
+
 public class SkillsActivity extends BaseActivity {
     SkillsAdminAdapter adapter;
     private DatabaseReference mDatabase;
