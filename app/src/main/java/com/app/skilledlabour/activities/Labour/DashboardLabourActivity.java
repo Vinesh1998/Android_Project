@@ -5,7 +5,6 @@ import static com.app.skilledlabour.helpers.common_helper.collection_labours;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -64,26 +63,20 @@ public class DashboardLabourActivity extends AppCompatActivity {
                 }
             }
         });
-
         myAvailability.setOnClickListener(v -> {
             startActivity( new Intent(this, MyAvailability.class));
         });
         btnSkills.setOnClickListener(v -> {
             startActivity( new Intent(this, SkillsActivity.class));
         });
-
-        btnMyJobs.setOnClickListener(v -> {
-            startActivity( new Intent(this, MyJobsActivity.class));
-        });
         btnComplaints.setOnClickListener(v -> {
             startActivity( new Intent(this, QueriesActivity.class));
         });
+        btnMyJobs.setOnClickListener(v -> {
+            startActivity( new Intent(this, MyJobsActivity.class));
+        });
         btnProfile.setOnClickListener(v -> {
-            Intent intent = new Intent(this, LabourProfile.class);
-            Bundle extras = new Bundle();
-            extras.putString("lab_id","1");
-            intent.putExtras(extras);
-            startActivity(intent);
+            Toast.makeText(this, "profile details!",Toast.LENGTH_SHORT).show();
         });
         btnProfile=findViewById(R.id.signOutBtn);
         btnProfile.setOnClickListener(v -> {

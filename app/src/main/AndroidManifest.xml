@@ -45,8 +45,5 @@
         <activity android:name=".activities.Labour.DashboardLabourActivity"/>
         <activity android:name=".activities.Labour.MyAvailability"/>
         <activity android:name=".activities.Labour.MyJobsActivity"/>
-        <activity android:name=".activities.Labour.JobDetails"/>
-        <activity android:name=".activities.Labour.QueryDetails"/>
-        <activity android:name=".activities.Labour.LabourProfile"/>
     </application>
 </manifest>

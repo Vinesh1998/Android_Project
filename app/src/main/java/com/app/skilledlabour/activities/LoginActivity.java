@@ -77,7 +77,40 @@ public class LoginActivity extends BaseActivity  {
                 signIn(etEmail.getText().toString().trim(), etPassword.getText().toString().trim(), view);
             }
         });
-        mAuthListener = firebaseAuth -> {};
+        mAuthListener = firebaseAuth -> {
+            FirebaseUser user = firebaseAuth.getCurrentUser();
+            if (user != null) {
+                mDatabase = FirebaseDatabase.getInstance().getReference();
+                mDatabase.child(collection_labours).child(Objects.requireNonNull(mAuth.getUid())).get().addOnCompleteListener(task -> {
+                    if (task.isSuccessful()) {
+                        Labour Labour =  task.getResult().getValue(com.app.skilledlabour.models.Labour.class);
+                        try {
+                            assert Labour != null;
+                            String uName = Labour.getName();
+//                            Toast.makeText(this, "welcome " + uName, Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(getApplicationContext(), DashboardLabourActivity.class));
+                        } catch (Exception ex) {
+                            ex.getMessage();
+                            mAuth.signOut();
+                        }
+                    } else {
+                        mDatabase.child(collection_customers).child(Objects.requireNonNull(mAuth.getUid())).get().addOnCompleteListener(task1 -> {
+                            if (task1.isSuccessful()) {
+                                Customer customer = task1.getResult().getValue(Customer.class);
+                                try {
+                                    assert customer != null;
+                                    String uName = customer.getName();
+//                                    Toast.makeText(this, "welcome " + uName, Toast.LENGTH_SHORT).show();
+                                } catch (Exception ex) {
+                                    ex.getMessage();
+                                    mAuth.signOut();
+                                }
+                            }
+                        });
+                    }
+                });
+            }
+        };
         tvCreateAccount.setOnClickListener(view->
                 startActivity(new Intent(getApplicationContext(), CreateAccountActivity.class))
         );
@@ -109,12 +142,12 @@ public class LoginActivity extends BaseActivity  {
                     else{
                         //check user role
                         mDatabase = FirebaseDatabase.getInstance().getReference();
-                        if(role.equals("Labour")) {
+                        if(!role.equals("Admin")) {
                             mDatabase.child(collection_labours).child(Objects.requireNonNull(mAuth.getUid())).get().addOnCompleteListener(task0 -> {
                                 if (task0.isSuccessful()) {
                                     Labour Labour = task0.getResult().getValue(com.app.skilledlabour.models.Labour.class);
                                     try {
-//                                        assert Labour != null;
+                                        assert Labour != null;
                                         if (Labour.isStatus())
                                             startActivity(new Intent(getApplicationContext(), DashboardLabourActivity.class));
                                         else {
@@ -125,41 +158,40 @@ public class LoginActivity extends BaseActivity  {
                                             startActivity(intent);
                                         }
                                     } catch (Exception ex) {
-                                        Toast.makeText(this, "Invalid user!", Toast.LENGTH_SHORT).show();
                                         ex.getMessage();
                                         mAuth.signOut();
-                                        Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
-                                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                                        startActivity(intent);
                                     }
                                 }else{
-                                    Toast.makeText(this, "invalid user!", Toast.LENGTH_SHORT).show();
-                                }
-                            });
-                        }else if(role.equals("Customer")) {
-                            mDatabase.child(collection_customers).child(Objects.requireNonNull(mAuth.getUid())).get().addOnCompleteListener(task0 -> {
-                                if (task0.isSuccessful()) {
-                                    Customer customer = task0.getResult().getValue(Customer.class);
-                                    try {
-                                        assert customer != null;
-                                        if (customer.isStatus())
-                                            startActivity(new Intent(getApplicationContext(), DashboardUserActivity.class));
-                                        else {
+                                    mDatabase.child(collection_customers).child(Objects.requireNonNull(mAuth.getUid())).get().addOnCompleteListener(task1 -> {
+                                        if (task1.isSuccessful()) {
+                                            Customer customer =  task1.getResult().getValue(com.app.skilledlabour.models.Customer.class);
+                                            try {
+                                                assert customer != null;
+                                                if(customer.isStatus())
+                                                    startActivity(new Intent(getApplicationContext(),DashboardUserActivity.class));
+                                                else{
+                                                    Toast.makeText(this, "invalid User!", Toast.LENGTH_SHORT).show();
+                                                    mAuth.signOut();
+                                                    Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                                                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                                    startActivity(intent);
+                                                }
+                                            } catch (Exception ex) {
+                                                ex.getMessage();
+                                                mAuth.signOut();
+                                            }
+                                        }else{
                                             Toast.makeText(this, "user blocked!", Toast.LENGTH_SHORT).show();
                                             mAuth.signOut();
                                             Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                                             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                             startActivity(intent);
                                         }
-                                    } catch (Exception ex) {
-                                        ex.getMessage();
-                                        mAuth.signOut();
-                                    }
-                                }else{
-                                    Toast.makeText(this, "invalid user!", Toast.LENGTH_SHORT).show();
+                                    });
                                 }
                             });
                         }
+
                     }
                     // [START_EXCLUDE]
                     hideProgressDialog();
