@@ -39,7 +39,13 @@
             android:text="Welcome User"
             android:textColor="#ffffff"
             android:textSize="26sp" />
-
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="user"
+            android:id="@+id/tvUser"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

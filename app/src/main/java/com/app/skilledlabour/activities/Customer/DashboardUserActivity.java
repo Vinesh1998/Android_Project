@@ -1,8 +1,12 @@
 package com.app.skilledlabour.activities.Customer;
 
+import static com.app.skilledlabour.helpers.common_helper.collection_customers;
+import static com.app.skilledlabour.helpers.common_helper.collection_labours;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,14 +20,20 @@ import com.app.skilledlabour.activities.Admin.QueriesActivity;
 import com.app.skilledlabour.activities.Admin.SkillsActivity;
 import com.app.skilledlabour.activities.LoginActivity;
 import com.app.skilledlabour.adapter.SkillsAdminAdapter;
+import com.app.skilledlabour.models.Customer;
+import com.app.skilledlabour.models.Labour;
+import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.Objects;
 
 public class DashboardUserActivity extends AppCompatActivity {
-    SkillsAdminAdapter adapter;
     Button searchBtn,myBookings,labours,btnComplaints,btnProfile,signOutBtn;
-    RecyclerView recyclerView;
     private FirebaseAuth mAuth;
-
+    private DatabaseReference mDatabase;
+    TextView tvUser;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +44,25 @@ public class DashboardUserActivity extends AppCompatActivity {
         btnComplaints = findViewById(R.id.btnComplaints);
         btnProfile = findViewById(R.id.btnProfile);
         signOutBtn = findViewById(R.id.signOutBtn);
+        tvUser = findViewById(R.id.tvUser);
+        FirebaseApp.initializeApp(this);
         mAuth = FirebaseAuth.getInstance();
+
+        mDatabase = FirebaseDatabase.getInstance().getReference();
+        mDatabase.child(collection_customers).child(Objects.requireNonNull(mAuth.getUid())).get().addOnCompleteListener(task -> {
+            if (task.isSuccessful()) {
+                Customer customer =  task.getResult().getValue(Customer.class);
+                try {
+                    assert customer != null;
+                    String uName = customer.getName();
+                    tvUser.setText(uName);
+                } catch (Exception ex) {
+                    ex.getMessage();
+                    mAuth.signOut();
+                }
+            }
+        });
+
         searchBtn.setOnClickListener(view -> {
             startActivity( new Intent(this, FindSpecialistActivity.class));
         });

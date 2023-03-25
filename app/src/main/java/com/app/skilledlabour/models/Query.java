@@ -12,6 +12,7 @@ public class Query {
     private String datetime;
     private boolean status;
 
+    public  Query(){}
     public Query(int id, int cust_id, String cust_name, int emp_id, String emp_name, String msg, String datetime, boolean status) {
         this.id = id;
         this.cust_id = cust_id;

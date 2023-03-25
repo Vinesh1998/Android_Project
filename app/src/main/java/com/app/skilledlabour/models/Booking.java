@@ -8,17 +8,17 @@ public class Booking {
     private String cust_name;
     private int emp_id;
     private String emp_name;
-    private int age;
     private String datetime;
     private String status;
-
-    public Booking(int id, int cust_id, String cust_name, int emp_id, String emp_name, int age, String datetime, String status) {
+    private String description;
+    public Booking(){}
+    public Booking(int id, int cust_id, String cust_name, int emp_id, String emp_name,String description, String datetime, String status) {
         this.id = id;
         this.cust_id = cust_id;
         this.cust_name = cust_name;
         this.emp_id = emp_id;
         this.emp_name = emp_name;
-        this.age = age;
+        this.description = description;
         this.datetime = datetime;
         this.status = status;
     }
@@ -63,12 +63,12 @@ public class Booking {
         this.emp_name = emp_name;
     }
 
-    public int getAge() {
-        return age;
+    public String getDescription() {
+        return description;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public String getDatetime() {

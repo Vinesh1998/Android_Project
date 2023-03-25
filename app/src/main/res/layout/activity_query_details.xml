@@ -17,7 +17,7 @@ android:layout_height="match_parent"
     <LinearLayout
         android:id="@+id/view"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="200dp"
         android:paddingTop="7dp"
         android:background="@drawable/rectangle_round"
         android:elevation="6dp"
@@ -39,95 +39,92 @@ android:layout_height="match_parent"
             android:src="@drawable/ic_baseline_keyboard_arrow_left_24"
             tools:ignore="UseAppTint"
             android:focusable="true" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Author Details"
-            android:textColor="#ffffff"
-            android:padding="10dp"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Query Details"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="#ffffff" />
         </LinearLayout>
         <ImageView
             android:id="@+id/user_item_image"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:layout_gravity="center"
             android:layout_marginStart="9dp"
-            app:srcCompat="@drawable/ic_baseline_person_24"
+            app:srcCompat="@drawable/ic_baseline_contact_support_24"
             tools:ignore="VectorDrawableCompat" />
+
+        <TextView
+            android:id="@+id/tvCustName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:maxLines="1"
+            android:text="Name"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/tvSlotTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:maxLines="1"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:text="01-01-2023 00:00:00"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:paddingLeft="20dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/white" />
     </LinearLayout>
     <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:id="@+id/parent_layout">
-        <TextView
-            android:id="@+id/tvLabName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="9dp"
-            android:maxLines="1"
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:text="Name"
-            android:textSize="30dp"
-            android:textColor="@color/secondary" />
-        <TextView
-            android:id="@+id/tvLabourEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="9dp"
-            android:maxLines="1"
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:drawableLeft="@drawable/ic_baseline_email_24"
-            android:text="email"
-            android:drawableTint="@color/primary"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:paddingLeft="20dp"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/gray" />
-        <TextView
-            android:id="@+id/tvLabourMobile"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="9dp"
-            android:maxLines="1"
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:drawableLeft="@drawable/ic_baseline_phone_android_24"
-            android:text="phone"
-            android:drawableTint="@color/primary"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:paddingLeft="20dp"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/gray" />
-        <TextView
-            android:id="@+id/tvLabourSkills"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="9dp"
-            android:maxLines="1"
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:drawableLeft="@drawable/ic_baseline_work_24"
-            android:text="skill set"
-            android:drawableTint="@color/primary"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:paddingLeft="20dp"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/gray" />
 
+        <TextView
+            android:id="@+id/tvQuery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:padding="10dp"
+            android:text="Query: "
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="bold" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="20dp"
+            android:padding="7dp"
+            android:id="@+id/etReplyMsg"
+            android:hint="type reply..."/>
         <Button
-                  android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:padding="10dp"
-            android:id="@+id/btnBookNow"
-                  android:layout_margin="10dp"
-                  android:text=" Book Now"/>
+            android:id="@+id/btnReply"
+            android:layout_width="255dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:text="Send" />
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:padding="10dp"
+            android:id="@+id/tvClose"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:text="Close Query"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:textColor="@color/red"
+            android:textAlignment="center"/>
         </LinearLayout>
 </LinearLayout>
     </ScrollView>

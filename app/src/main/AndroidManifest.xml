@@ -32,6 +32,7 @@
         <activity android:name=".activities.Admin.AllBookingsActivity"/>
         <activity android:name=".activities.Admin.CustomersListActivity"/>
         <activity android:name=".activities.Admin.QueriesActivity"/>
+        <activity android:name=".activities.Admin.CustomerDetails"/>
 
         <!--        user activities-->
         <activity android:name=".activities.Customer.DashboardUserActivity"/>
@@ -44,5 +45,8 @@
         <activity android:name=".activities.Labour.DashboardLabourActivity"/>
         <activity android:name=".activities.Labour.MyAvailability"/>
         <activity android:name=".activities.Labour.MyJobsActivity"/>
+        <activity android:name=".activities.Labour.JobDetails"/>
+        <activity android:name=".activities.Labour.QueryDetails"/>
+        <activity android:name=".activities.Labour.LabourProfile"/>
     </application>
 </manifest>

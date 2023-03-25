@@ -4,10 +4,6 @@ import com.app.skilledlabour.models.Booking;
 import com.app.skilledlabour.models.Customer;
 import com.app.skilledlabour.models.Labour;
 import com.app.skilledlabour.models.Query;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,10 +17,9 @@ public class common_helper {
         return email.equals("admin@gmail.com") && password.equals("admin123");
     }
 
-    public static List<Labour> getLabourById(String id){
+    public static Labour getLabourById(String id){
         //read list based on id
-        List<Labour> list = new ArrayList<>();
-        list.add(new Labour("1",
+        Labour labour = new Labour("1",
                 "employee 1",
                 "emp@gmail.com",
                 "123",
@@ -33,8 +28,8 @@ public class common_helper {
                 "10:00-18:00",
                 "4.5",
                 true
-        ));
-        return list;
+        );
+        return labour;
     }
 
     public static List<Customer> getCustomersList(){
@@ -46,7 +41,31 @@ public class common_helper {
                 "1, fblock Merine",
                 true
                 ));
+        list.add(new Customer("2",
+                "cust2@gmail.com",
+                "Customer 2",
+                "+10924655545",
+                "1, fblock Merine",
+                true
+        ));
+        list.add(new Customer("3",
+                "cust3@gmail.com",
+                "Customer 3",
+                "+1075475623126",
+                "1, fblock Merine",
+                true
+        ));
         return list;
+    }
+
+    public static Customer getCustomer(String id) {
+        List<Customer> list = getCustomersList();
+        Customer customer = new Customer();
+        for (int i = 0; i < list.size(); i++) {
+                if(list.get(i).getId().equals(id))
+                    customer = list.get(i);
+        }
+        return customer;
     }
 
     public static List<Booking> getAllBookingsData(){
@@ -56,7 +75,7 @@ public class common_helper {
                 "Customer1",
                 1,
         "employee 1",
-                32,
+                "Ac repair",
                 "01-03-2023 10:30",
                 "Booked"
                 ));
@@ -65,11 +84,35 @@ public class common_helper {
                 "Customer1",
                 2,
         "employee 2",
-                35,
+                "Water leakage problem",
                 "02-03-2023 12:30",
                 "Canceled"
                 ));
+        list.add(new Booking(3,
+                3,
+                "Customer3",
+                2,
+                "employee 3",
+                "Electric works",
+                "03-03-2023 12:30",
+                "Booked"
+        ));
+        list.add(new Booking(4,
+                3,
+                "Customer3",
+                2,
+                "employee 4",
+                "Hardware problem",
+                "05-03-2023 12:30",
+                "Booked"
+        ));
         return list;
+    }
+
+    public static Booking getBookingData(int id){
+        List<Booking> list = getAllBookingsData();
+        Booking booking = list.get(id-1);
+        return booking;
     }
 
     public static List<Query> getAllQueries(){
@@ -85,4 +128,24 @@ public class common_helper {
         ));
         return list;
     }
+
+    public static List<Query> getLabourQueries(int lab_id){
+        List<Query> list = getAllQueries();
+        List<Query> my_list = new ArrayList<>();
+
+        for (int i = 0; i < list.size(); i++) {
+            if(list.get(i).getEmp_id() == lab_id) my_list.add(list.get(i));
+        }
+        return my_list;
+    }
+
+    public static Query getQueryDetails(int q_id){
+        List<Query> list = getAllQueries();
+        Query query = new Query();
+        for (int i = 0; i < list.size(); i++) {
+            if(list.get(i).getId() == q_id) query = list.get(i);
+        }
+        return query;
+    }
+
 }
