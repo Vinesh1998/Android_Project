@@ -42,5 +42,7 @@ public class QueriesActivity extends AppCompatActivity {
         final BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(this);
         bottomSheetDialog.setContentView(R.layout.activity_add_skill);
         bottomSheetDialog.show();
+
+        
     }
 }

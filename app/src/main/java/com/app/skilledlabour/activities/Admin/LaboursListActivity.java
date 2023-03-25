@@ -48,7 +48,7 @@ public class LaboursListActivity extends BaseActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         getLaboursList();
     }
-    
+
 
     private List<Labour> getLaboursList(){
         if(list.size() != 0) list.clear();
