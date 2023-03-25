@@ -81,7 +81,7 @@ public class LabourDetails extends BaseActivity {
         }
 
 
-        
+
         btnEdit.setOnClickListener(v -> {
             final BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(this);
             bottomSheetDialog.setContentView(R.layout.activity_edit_labour);
@@ -114,6 +114,8 @@ public class LabourDetails extends BaseActivity {
             });
         });
     }
+
+    
     private boolean validateForm(String email, String mobile, String name, String skills){
         boolean result = true;
         showProgressDialog();
