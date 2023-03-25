@@ -17,6 +17,7 @@ public class AllBookingsActivity extends AppCompatActivity {
     AllBookingsAdapter adapter;
     RecyclerView recyclerView;
 
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
