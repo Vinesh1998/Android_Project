@@ -104,15 +104,9 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/rbLabour"
+                android:id="@+id/rbFemale"
                 android:buttonTint="@color/primary_dark"
-                android:text="Labour"/>
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/rbUser"
-                android:buttonTint="@color/primary_dark"
-                android:text="Customer"/>
+                android:text="Labour/User"/>
         </RadioGroup>
     </LinearLayout>
     <Button

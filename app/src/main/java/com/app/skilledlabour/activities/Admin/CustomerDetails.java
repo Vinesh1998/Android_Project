@@ -1,9 +1,11 @@
 package com.app.skilledlabour.activities.Admin;
 
+import static com.app.skilledlabour.helpers.common_helper.collection_labours;
 import static com.app.skilledlabour.helpers.common_helper.getCustomer;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -15,7 +17,13 @@ import android.widget.Toast;
 import com.app.skilledlabour.R;
 import com.app.skilledlabour.helpers.BaseActivity;
 import com.app.skilledlabour.models.Customer;
+import com.app.skilledlabour.models.Labour;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class CustomerDetails extends BaseActivity {
     Customer customer = new Customer();

@@ -1,7 +1,6 @@
 package com.app.skilledlabour.activities.Admin;
 
 import static com.app.skilledlabour.helpers.common_helper.getAllQueries;
-import static com.app.skilledlabour.helpers.common_helper.getLabourQueries;
 
 import android.os.Bundle;
 
@@ -11,7 +10,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.app.skilledlabour.R;
 import com.app.skilledlabour.adapter.QueryAdapter;
+import com.app.skilledlabour.adapter.SkillsAdminAdapter;
 import com.app.skilledlabour.models.Query;
+import com.app.skilledlabour.models.Skill;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import java.util.List;
@@ -30,12 +31,16 @@ public class QueriesActivity extends AppCompatActivity {
     }
 
     public void setUpRecyclerView(){
-        int lab_id = 1;
-        List<Query> list = getLabourQueries(lab_id);
+        List<Query> list = getAllQueries();
         recyclerView = findViewById(R.id.ListSkills);
         adapter = new QueryAdapter(list, getApplicationContext());
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 
+    public void showAddSkill(){
+        final BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(this);
+        bottomSheetDialog.setContentView(R.layout.activity_add_skill);
+        bottomSheetDialog.show();
+    }
 }
