@@ -51,6 +51,7 @@ Sequence of information
     Labour details (Name, email address, Phone number and Service provided)
  2.Customers
     Customer details (Name, email address and Phone number)
+    
  3.Bookings
     Booking Status
  4. Queries
