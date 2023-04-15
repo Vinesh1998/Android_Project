@@ -42,6 +42,7 @@ public class CustomerDetails extends BaseActivity {
         findViewById(R.id.btnBack).setOnClickListener(view->{
             this.finish();
         });
+
         parent_layout = findViewById(R.id.parent_layout);
         tvCustName = findViewById(R.id.tvCustName);
         tvCustEmail = findViewById(R.id.tvCustEmail);
@@ -96,7 +97,7 @@ public class CustomerDetails extends BaseActivity {
         });
     }
 
-    
+
 
     private void showDetails(Customer customer){
         parent_layout.setVisibility(View.VISIBLE);
