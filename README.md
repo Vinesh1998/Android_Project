@@ -2,6 +2,8 @@
 tasks
 
 # Skill labour App
+# Logo
+![alt text](http://url/to/img.png)
 
 # Team Members: 
 
@@ -55,6 +57,8 @@ Sequence of information
  ## 3.Bookings
     Booking Status
  ## 4. Queries
+ 
+ 
  
  
  
