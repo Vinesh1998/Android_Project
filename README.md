@@ -2,21 +2,34 @@
 tasks
 
 # Skill labour App
+
 #Team Members: 
+
 ###Palla Vinesh Reddy
+
 ###Palla Venu Reddy
+
 ###Lohitha Julakanti
+
 ###Prudhvi Chigurupati
 
 #	There are different users in this application. The roles are as follows: 
+
 ### Admin
+
 ###	Labor/Employee 
+
 ###Customer/User
+
 ###admin will have the access of all labour & user details
+
 ###admin can check the bookings and complaints
+
 ##admin login details
+
 ##Username : admin@gmail.com
 ##Password : 123456 or admin123 labour should create account and add his skills (ex: electrician/plumber)
+
 ##Admin  will receive bookings from user.
 ## user has to create his account  to find labour for the work and user can book the appoinment user can able to raise complaint on labour.
  
