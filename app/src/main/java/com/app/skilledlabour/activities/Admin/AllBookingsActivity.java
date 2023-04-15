@@ -13,6 +13,8 @@ import com.app.skilledlabour.models.Booking;
 
 import java.util.List;
 
+
+
 public class AllBookingsActivity extends AppCompatActivity {
     AllBookingsAdapter adapter;
     RecyclerView recyclerView;
