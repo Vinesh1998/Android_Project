@@ -39,6 +39,24 @@ labour will give reply for that particular complaint.
 ## Email/Mobile/Employe Id
 ## Password
 
-The Supported devices are Google Pixel 6 Pro, Google pixel 6a and Google pixel 6.
+The Supported devices are Google Pixel 6 Pro, Google pixel 6a and Google pixel 6 and supporting JDK versions 1.8.
+
+## database is used for this project is firebase.
+
+Sequence of information
+
+1. Login Page - It contains login information.
+2. Welcome Page 
+ 1.Labourers
+    Labour details (Name, email address, Phone number and Service provided)
+ 2.Customers
+    Customer details (Name, email address and Phone number)
+ 3.Bookings
+    Booking Status
+ 4. Queries
+ 
+ 
+ 
+
 
 
