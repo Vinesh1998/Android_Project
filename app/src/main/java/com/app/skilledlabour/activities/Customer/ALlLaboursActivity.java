@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.app.skilledlabour.R;
 import com.app.skilledlabour.adapter.QueryAdapter;
 
+
 public class ALlLaboursActivity extends AppCompatActivity {
     QueryAdapter adapter;
     RecyclerView recyclerView;
