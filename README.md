@@ -3,7 +3,7 @@ tasks
 
 # Skill labour App
 # Logo
-![alt text](http://url/to/img.png)
+![alt text](https://github.com/Vinesh1998/Android_Project/blob/master/logo.jpg)
 
 # Team Members: 
 
