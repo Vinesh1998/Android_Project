@@ -45,16 +45,16 @@ The Supported devices are Google Pixel 6 Pro, Google pixel 6a and Google pixel 6
 
 Sequence of information
 
-1. Login Page - It contains login information.
-2. Welcome Page 
- 1.Labourers
+## 1. Login Page - It contains login information.
+## 2. Welcome Page 
+ ## 1.Labourers
     Labour details (Name, email address, Phone number and Service provided)
- 2.Customers
+ ## 2.Customers
     Customer details (Name, email address and Phone number)
     
- 3.Bookings
+ ## 3.Bookings
     Booking Status
- 4. Queries
+ ## 4. Queries
  
  
  
