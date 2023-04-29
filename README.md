@@ -16,7 +16,15 @@ tasks
 
 ### Prudhvi Chigurupati
 
-#	There are different users in this application. The roles are as follows: 
+# Primary Goal of this Application:
+##The primary goal of this project is to create an automated system that will facilitate communication and strengthen the customer-worker relationship. This system also helps to save time and effort when searching for workers. Furthermore, this system enables a worker to obtain suitable work in his or her category throughout the year and thus improves.
+his/her financial status.
+
+## We proposed a system in which anyone can book any workers based on their location or area. Workers will be able to register themselves with the application at any time. The information about registered workers is processed and presented to the customer.
+
+##The customer can then choose any labors (workers) for whom an intimation has been issued. The system administrator will receive an email with the necessary information. Admin, in turn, communicates with the concerned worker, and the worker may be assigned to work at the customer's location. When the work is finished, the worker approaches the system administrator and provides work information. Based on this, Admin will send the bill information to the customer in question for payment. This system will enable the administrator to generate a variety of reports.
+
+##There are different users in this application. The roles are as follows: 
 
 ### Admin
 
@@ -28,10 +36,18 @@ tasks
 
 ### admin can check the bookings and complaints
 
-## admin login details
 
-## Username : admin@gmail.com
-## Password : 123456 or admin123 labour should create account and add his skills (ex: electrician/plumber)
+
+# Credentials for Admin, Labour and Customer  to open this application:
+## Customer
+## Username:dhoni@gmail.com
+## Password:Dhoni@1998
+## Admin
+## Username: admin@gmail.com
+## Password: admin123
+## Labour
+## Username: lohitha@gmail.com
+## PAssword:Bittu@2000
 
 ## Admin  will receive bookings from user.
 ## user has to create his account  to find labour for the work and user can book the appoinment user can able to raise complaint on labour.
@@ -58,6 +74,8 @@ Sequence of information
  ## 3.Bookings
     Booking Status
  ## 4. Queries
+ 
+ 
  
  
  
